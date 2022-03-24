@@ -1,0 +1,9 @@
+transformers==2.1.1
+keras
+numpy
+future
+tqdm
+scikit-learn
+tb-nightly
+thulac
+pytorch

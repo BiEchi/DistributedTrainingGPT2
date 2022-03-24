@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#SBATCH --job-name="jack_bert_gpu"
+#SBATCH --output="jack_bert_gpu_%j.%N.out"
+#SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=40
+#SBATCH --export=ALL
+#SBATCH --gres=gpu:v100:4
+#SBATCH --time=24:00:00
+ 
+module load opence/1.5.1
+conda activate opence-bert
+cd ~/gpt2/GPT2-Chinese-Parallel/
+
+# make the vocabulary
+# cd cache/ && time bash make_vocab.sh && cd ../
+
+# train the model
+time bash train.sh
+
+
+# inference (generate following text)
+time bash generate.sh
+
+echo Comments: $2
