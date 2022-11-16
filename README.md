@@ -178,6 +178,7 @@ In addition, Apex can significantly increase the training speed of DPS and Horov
 
 ## Copyright
 
+```bibtex
 @inproceedings{bai2022modern,
   title={Modern Distributed Data-Parallel Large-Scale Pre-training Strategies For NLP models},
   author={Bai, Hao},
@@ -185,3 +186,4 @@ In addition, Apex can significantly increase the training speed of DPS and Horov
   pages={44--53},
   year={2022}
 }
+```
