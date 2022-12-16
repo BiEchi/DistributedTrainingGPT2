@@ -40,6 +40,12 @@ cd DistributedTrainingGPT2
 cd GPT2-Chinese-Parallel # for example
 ```
 
+### 环境配置 Environment Setup
+
+```shell
+conda env create -f environment.yml
+```
+
 ### 创造数据集文件夹 Create the dataset folder
 
 本repo中,对于**每个**文件夹,都必须提供一个`data`子文件夹,用于存放数据集`train.json`.
